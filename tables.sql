@@ -14,6 +14,14 @@ dr exec -it llmemory-db psql -U llmemory -d llmemory
 */
 
 -- id_mensaje, fecha_mensaje, tipo_usuario, pensamiento, mensaje
+
+CREATE TABLE chat_unico (
+    id_chat VARCHAR(50) NOT NULL,
+    mensaje TEXT,
+    
+    CONSTRAINT pk_chuni PRIMARY KEY (id_chat)
+);
+
 CREATE TABLE mensajes (
     id_mensaje VARCHAR(50) NOT NULL,
     fecha_mensaje TIMESTAMP NOT NULL,
